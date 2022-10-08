@@ -22,5 +22,6 @@ describe('should print <h1>Alex</h1>', () => {
     })
     app.mount('.root')
     console.log(document.body.innerHTML.toString())
+    expect(document.getElementsByClassName('hello').length).toBe(1)
   })
 })
