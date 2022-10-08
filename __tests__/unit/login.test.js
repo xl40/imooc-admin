@@ -11,7 +11,7 @@ describe('HelloWorld.vue', () => {
     expect(wrapper.text()).toMatch(msg)
   })
 })
-
+// 使用VUE实例渲染组件的方式，这种方式有很大的局限性...
 describe('should print <h1>Alex</h1>', () => {
   it('should renders props.msg when passed', function() {
     const root = document.createElement('div')
@@ -24,4 +24,13 @@ describe('should print <h1>Alex</h1>', () => {
     console.log(document.body.innerHTML.toString())
     expect(document.getElementsByClassName('hello').length).toBe(1)
   })
+})
+
+describe('test with shallowMount', function() {
+  const msg = 'Alex'
+  const wrapper = shallowMount(HelloWorld, {
+    propsData: { msg }
+  })
+  console.log(wrapper.text())
+  expect(wrapper.text()).toMatch(msg)
 })
