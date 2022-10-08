@@ -36,4 +36,6 @@ describe('test with shallowMount', function() {
   const length = wrapper.findAll('.hello').length
   console.log(length)
   expect(length).toBe(1)
+  console.log(wrapper.props('msg'))
+  expect(wrapper.props('msg')).toEqual(msg)
 })
