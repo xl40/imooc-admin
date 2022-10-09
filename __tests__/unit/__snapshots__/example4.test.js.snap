@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test with shallowMount 组件渲染正常 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    class="hello"
+  >
+    <h1>
+      Alex
+    </h1>
+  </div>
+  <div
+    class="test"
+  >
+     abc 
+  </div>
+  
+</div>
+`;
