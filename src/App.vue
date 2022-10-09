@@ -1,5 +1,17 @@
 <template>
-  <div id="nav"></div>
-  <router-view/>
+  <div id='app'>
+    <TodoList />
+  </div>
+  <router-view />
 </template>
-<style lang="scss"></style>
+
+<script>
+import TodoList from '@/views/TodoList/TodoList'
+
+export default {
+  name: 'app',
+  components: {
+    TodoList
+  }
+}
+</script>
